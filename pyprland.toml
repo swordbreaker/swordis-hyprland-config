@@ -1,0 +1,23 @@
+[pyprland]
+plugins = [
+ "scratchpads",
+]
+
+# using variables for demonstration purposes (not needed)
+[pyprland.variables]
+term_classed = "kitty --class"
+
+[scratchpads.term]
+animation = "fromTop"
+command = "[term_classed] main-dropterm"
+class = "main-dropterm"
+size = "75% 60%"
+max_size = "1920px 100%"
+
+[scratchpads.1pass]
+animation = "fromTop"
+command = "1password --class 1pass-scratch"
+size = "75% 60%"
+max_size = "1920px 100%"
+class = "1Password"
+process_tracking = false
