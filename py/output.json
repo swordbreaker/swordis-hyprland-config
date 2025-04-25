@@ -609,7 +609,7 @@
     "catch_all": false,
     "description": "[Launcher|Rofi menus] keybindings hint",
     "dispatcher": "exec",
-    "arg": "pkill -x rofi || ~/.config/hypr/scripts/rofi_keybinds.sh"
+    "arg": "pkill -x rofi || ~/.config/hypr/py/r.sh keybinds.hint.py"
 },
 {
     "locked": false,

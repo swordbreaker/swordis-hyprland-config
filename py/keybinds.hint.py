@@ -61,6 +61,8 @@ def get_hypr_keybinds():
     
     binding = bindings[int(selected.stdout)]
 
-    subprocess.run(f"hyprctl dispatch {binding.dispatcher} {binding.arg}", shell=True)
+    print(f"Selected binding: {binding.dispatcher} {binding.arg}")
+
+    subprocess.run(f"hyprctl dispatch '{binding.dispatcher}' '{binding.arg}'", shell=True)
 
 get_hypr_keybinds()
