@@ -1,5 +1,4 @@
-# a
-# ~/.config/hydepanel/init.sh -start
+#!/usr/bin/env bash
 
 killall waybar
 waybar
