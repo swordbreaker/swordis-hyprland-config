@@ -1,7 +1,5 @@
 [pyprland]
-plugins = [
- "scratchpads",
-]
+plugins = ["scratchpads", "shortcuts_menu"]
 
 # using variables for demonstration purposes (not needed)
 [pyprland.variables]
@@ -14,10 +12,22 @@ class = "main-dropterm"
 size = "75% 60%"
 max_size = "1920px 100%"
 
-[scratchpads.1pass]
+[scratchpads.proton-pass]
 animation = "fromTop"
-command = "1password --class 1pass-scratch"
+command = "proton-pass"
 size = "75% 60%"
 max_size = "1920px 100%"
-class = "1Password"
-process_tracking = false
+class = "Proton Pass"
+
+[shortcuts_menu.entries]
+"Color picker" = [
+    { name = "format", options = [
+        "hex",
+        "rgb",
+        "hsv",
+        "hsl",
+        "cmyk",
+    ] },
+    "sleep 0.2; hyprpicker --format [format] | wl-copy", # sleep to let the menu close before the picker opens
+]
+"foobar" = "ls"
